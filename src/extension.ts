@@ -34,7 +34,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     vscode.commands.executeCommand("setContext", "neovim.ctrlKeysInsert", useCtrlKeysInsertMode);
 
     try {
-        const plugin = new MainController({
+        const plugin = new MainController({ 
             customInitFile: customInit,
             extensionPath: context.extensionPath.replace(/\\/g, "\\\\"),
             highlightsConfiguration: {
